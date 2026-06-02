@@ -128,11 +128,16 @@ git clone https://github.com/Lakshay1805/Ebazaar-FullStack-Ecommerce-Platform.gi
 
 ```
 ### 2️⃣ Backend Setup
+```bash
 
 - cd backend
 - npm install
 
+```
+
 #### Create .env file
+
+```bash
 
 MONGO_URI=your_mongodb_uri
 JWT_SECRET=your_secret
@@ -147,20 +152,30 @@ RAZOR_KEY_SECRET=your_razorpay_secret
 EMAIL_USER=your_email
 EMAIL_PASS=your_email_password
 
+```
+
 #### run Backend
+```bash
 
 npm run start
+```
 
 ### 3️⃣ Frontend Setup
+```bash
 
 cd frontend
 npm install
 npm run dev
 
+```
+
 #### Create .env file
+```bash
 
 VITE_API_URL=http://localhost:5000
 VITE_RAZORPAY_KEY_ID=your_key
+
+```
 
 ---
 
