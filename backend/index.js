@@ -15,6 +15,7 @@ const paymentRoutes = require("./routes/paymentRoutes.js")
 const subscriptionRoutes = require("./routes/subscriptionRoute.js")
 const analyticRoutes = require("./routes/analyticRoutes.js")
 const errorHandler = require("./middleware/errorHandlerMiddleware.js")
+const PORT = process.env.PORT || 8000
 
 connectDB();
 app.use(cors({
@@ -38,6 +39,6 @@ app.get("/" , (req , res)=>{
 
 app.use(errorHandler);
 
-app.listen(process.env.PORT , ()=>{
+app.listen(PORT , ()=>{
     console.log(`App is listening on port ${process.env.PORT} `)
 })

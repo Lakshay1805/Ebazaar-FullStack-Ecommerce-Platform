@@ -164,7 +164,7 @@ DB_ATLAS=your_db_atlas_connection_compass
 #### run Backend
 ```bash
 
-npm run start
+npm start
 ```
 
 ### 3️⃣ Frontend Setup
@@ -179,7 +179,7 @@ npm run dev
 #### Create .env file
 ```bash
 
-VITE_API_URL=http://localhost:5000
+VITE_BASE_URL=http://localhost:8000
 VITE_RAZORPAY_KEY_ID=your_key
 
 ```
