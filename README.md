@@ -6,9 +6,11 @@ This project demonstrates real-world backend engineering with authentication, va
 
 ---
 
-## 🚀 Live Demo
-Frontend: https://your-frontend-url  
-Backend API: https://your-backend-url  
+## 🌐 Live Demo
+
+**Frontend:** https://ebazaar-three.vercel.app
+
+**Backend API:** https://ebazaar-fullstack-ecommerce-platform.onrender.com 
 
 ---
 
