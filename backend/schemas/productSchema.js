@@ -1,4 +1,4 @@
-const Joi = require("Joi")
+const Joi = require("joi")
 
 module.exports.productSchema = Joi.object({
     name: Joi.string()
