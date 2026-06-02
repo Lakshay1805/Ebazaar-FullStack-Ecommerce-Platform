@@ -1,0 +1,21 @@
+const express = require("express")
+const router = express.Router()
+const {registerUser , loginUser , getUsers , refreshToken , logoutUser, forgetPassword, verifyUser, verifyOtp, resetPassword, getMyInfo, resendVerificationOtp} = require("../controller/userController.js")
+const {authenticateToken} = require("../middleware/authMiddleware.js")
+const {admin} = require("../middleware/adminMiddleware.js")
+const {authLimiter} = require("../middleware/authLimitMiddleware.js")
+const { validateUserRegister , validateUserLogin } = require("../middleware/validateMiddleware.js")
+
+router.post("/register", validateUserRegister , registerUser)
+router.post("/login" , authLimiter ,validateUserLogin , loginUser)
+router.get("/getUsers" , authenticateToken , admin , getUsers)
+router.post("/refresh" , refreshToken)
+router.post("/logout" , logoutUser)
+router.post("/forgetPassword" , forgetPassword)
+router.post("/verifyUser" , verifyUser)
+router.post("/verifyOtp" , verifyOtp)
+router.post("/resetPassword" , resetPassword)
+router.get("/profile", authenticateToken , getMyInfo)
+router.post("/resendOtp" , resendVerificationOtp)
+
+module.exports = router;
