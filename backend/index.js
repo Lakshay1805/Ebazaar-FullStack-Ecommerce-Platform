@@ -4,9 +4,6 @@ const app = express()
 const helmet = require("helmet")
 const cors = require("cors")
 const cookieParser = require("cookie-parser")
-const path = require("path")
-const multer = require("multer")
-const cloudinary = require("cloudinary")
 const connectDB = require("./config/db.js")
 const userRoutes = require("./routes/userRoutes.js")
 const productRoutes = require("./routes/productRoutes.js")
@@ -19,9 +16,12 @@ const PORT = process.env.PORT || 8000
 
 connectDB();
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: [
+    "http://localhost:5173",
+    process.env.FRONTEND_URL
+  ],
   credentials: true
-}))
+}));
 app.use(helmet({ crossOriginResourcePolicy: false }));
 app.use(express.json())
 app.use(cookieParser())
@@ -40,5 +40,5 @@ app.get("/" , (req , res)=>{
 app.use(errorHandler);
 
 app.listen(PORT , ()=>{
-    console.log(`App is listening on port ${process.env.PORT} `)
+    console.log(`App is listening on port ${PORT} `)
 })
