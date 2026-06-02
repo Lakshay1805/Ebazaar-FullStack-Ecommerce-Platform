@@ -139,18 +139,25 @@ git clone https://github.com/Lakshay1805/Ebazaar-FullStack-Ecommerce-Platform.gi
 
 ```bash
 
-MONGO_URI=your_mongodb_uri
-JWT_SECRET=your_secret
+ACCESS_TOKEN_SECRET=your_access_toke_secret
+REFRESH_TOKEN_SECRET=your_refresh_toke_secret
+
+EMAIL_USER=your_business_email
+EMAIL_PASS=your_email_test_password
+ADMIN_EMAIL=admin_email
+
+NODE_ENV=production
 
 CLOUD_NAME=your_cloudinary_name
-CLOUD_API_KEY=your_cloudinary_key
-CLOUD_API_SECRET=your_cloudinary_secret
+CLOUD_API_KEY=your_cloudinary_api_key
+CLOUD_API_SECRET=your_cloudinary_api_secret
 
-RAZOR_KEY_ID=your_razorpay_key
-RAZOR_KEY_SECRET=your_razorpay_secret
+RAZOR_API_KEY=your_razorpay_api_key
+RAZOR_KEY_SECRET=your_razorpay_api_secret
 
-EMAIL_USER=your_email
-EMAIL_PASS=your_email_password
+PORT=8000
+
+DB_ATLAS=your_db_atlas_connection_compass
 
 ```
 
