@@ -93,6 +93,7 @@ This project demonstrates real-world backend engineering with authentication, va
 
 ## 📁 Project Structure
 
+```bash
 Ebazaar-FullStack-Ecommerce-Platform/
 │
 ├── backend/
@@ -119,6 +120,7 @@ Ebazaar-FullStack-Ecommerce-Platform/
 │
 ├── .gitignore
 └── README.md
+```
 
 ---
 
